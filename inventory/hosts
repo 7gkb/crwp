@@ -1,9 +1,13 @@
 [all:vars]
 ansible_python_interpreter=/usr/bin/python3
 
+[openvpn]
+srv1 ansible_host=192.168.1.45
+
 [sandbox]
 sandbox1 ansible_host=192.168.1.178
-
+#sandbox2 ansible_host=192.168.1.91
+ 
 [sandbox:vars]
 ansible_python_interpreter=/usr/bin/python3
 
@@ -17,7 +21,7 @@ host3 ansible_host=192.168.1.202
 
 [mint]
 pc05-20206 ansible_host=192.168.5.226
-pc05-10115 ansible_host=192.168.5.227
+pc00-i0006 ansible_host=192.168.5.227
 pc05-10113 ansible_host=192.168.5.228
 pc05-10112 ansible_host=192.168.5.229
 pc05-10117 ansible_host=192.168.5.237
@@ -25,7 +29,6 @@ pc05-10120 ansible_host=192.168.5.239
 pc05-10119 ansible_host=192.168.5.238
 pc05-10121 ansible_host=192.168.5.240
 pc05-10122 ansible_host=192.168.5.241
-pc05-10114 ansible_host=192.168.5.242
 pc05-10123 ansible_host=192.168.5.243
 pc05-20202 ansible_host=192.168.5.244
 pc05-20208 ansible_host=192.168.5.245
@@ -42,6 +45,125 @@ pc05-10108-2 ansible_host=192.168.5.234
 pc05-10102 ansible_host=192.168.5.235
 pc02-head_nurse ansible_host=192.168.5.126
 pc02-kdl ansible_host=192.168.5.174
+pc04-007-01 ansible_host=192.168.5.65
+
+[01]
+pc02-8102122557 ansible_host=192.168.1.92
+pc02-8102122648 ansible_host=192.168.1.94
+ivanova_ev_dp ansible_host=192.168.1.250
+
+[02]
+pc00-i001 ansible_host=192.168.5.233
+pc01-193092 ansible_host=192.168.5.38
+pc01-193775 ansible_host=192.168.5.127
+pc01-193097 ansible_host=192.168.5.41
+pc01-193108 ansible_host=192.168.5.56
+pc01-193107 ansible_host=192.168.5.58
+pc01-193114 ansible_host=192.168.5.54
+pc01-193115 ansible_host=192.168.5.57
+pc01-193874 ansible_host=192.168.5.50
+pc01-193101 ansible_host=192.168.5.40
+pc01-193825 ansible_host=192.168.5.39
+pc01-193806 ansible_host=192.168.5.37
+pc01-193102 ansible_host=192.168.5.59
+pc01-193094 ansible_host=192.168.5.55
+pc01-193116 ansible_host=192.168.5.60
+pc02-8102122618 ansible_host=192.168.5.132
+pc99-i0014 ansible_host=192.168.5.109
+pc00-i0026 ansible_host=192.168.5.171
+pc01-193832 ansible_host=192.168.5.52
+
+[03]
+pc01-193779 ansible_host=192.168.108.226
+pc01-193807 ansible_host=192.168.108.202
+pc01-193815 ansible_host=192.168.108.227
+pc01-193812 ansible_host=192.168.108.242
+pc01-193810 ansible_host=192.168.108.228
+pc01-193839 ansible_host=192.168.108.224
+pc01-193860 ansible_host=192.168.108.193
+pc01-193857 ansible_host=192.168.108.229
+pc00-i0020 ansible_host=192.168.108.246
+pc01-193763 ansible_host=192.168.108.243
+pc01-193823 ansible_host=192.168.108.223
+pc01-193819 ansible_host=192.168.108.213
+pc01-193861 ansible_host=192.168.108.215
+pc01-193798 ansible_host=192.168.108.233
+pc00-i0014 ansible_host=192.168.108.201
+pc01-193845 ansible_host=192.168.108.186
+pc01-193879 ansible_host=192.168.108.214
+pc01-193093 ansible_host=192.168.108.106
+pc00-i0015 ansible_host=192.168.108.203
+pc00-i0023 ansible_host=192.168.108.240
+pc01-193844 ansible_host=192.168.108.236
+pc01-193814 ansible_host=192.168.108.218
+pc01-193833 ansible_host=192.168.108.219
+pc01-193817 ansible_host=192.168.108.210
+pc01-193802 ansible_host=192.168.108.216
+pc01-193866 ansible_host=192.168.108.185
+pc01-193822 ansible_host=192.168.108.196
+pc00-i0013 ansible_host=192.168.108.204
+pc01-193885 ansible_host=192.168.108.184
+pc01-193820 ansible_host=192.168.108.221
+pc00-i0017 ansible_host=192.168.108.180
+pc01-193795 ansible_host=192.168.108.222
+pc01-193796 ansible_host=192.168.108.237
+pc01-193805 ansible_host=192.168.108.231
+pc01-193776 ansible_host=192.168.108.211
+pc01-193791 ansible_host=192.168.108.244
+pc01-193811 ansible_host=192.168.108.220
+pc01-193789 ansible_host=192.168.108.230
+pc01-193853 ansible_host=192.168.108.205
+pc01-193889 ansible_host=192.168.108.212
+pc01-193793 ansible_host=192.168.108.197
+pc01-193862 ansible_host=192.168.108.217
+pc02-8102122609 ansible_host=192.168.108.177
+pc02-8102122632 ansible_host=192.168.108.136
+pc02-8102122575 ansible_host=192.168.108.183
+pc02-8102122577 ansible_host=192.168.108.175
+pc02-8102122584 ansible_host=192.168.108.193
+
+[04]
+pc01-193865 ansible_host=192.168.5.91
+pc01-193809 ansible_host=192.168.5.92
+pc01-193852 ansible_host=192.168.5.72
+pc01-193886 ansible_host=192.168.5.15
+pc01-193851 ansible_host=192.168.5.94
+pc01-193872 ansible_host=192.168.5.97
+pc01-193840 ansible_host=192.168.5.98
+pc01-193876 ansible_host=192.168.5.192
+pc01-193837 ansible_host=192.168.5.203
+pc01-193878 ansible_host=192.168.5.96
+pc01-193824 ansible_host=192.168.5.175
+pc01-193883 ansible_host=192.168.5.177
+pc01-193867 ansible_host=192.168.5.17
+pc04-007-01 ansible_host=192.168.5.65
+pc01-193772 ansible_host=192.168.5.165
+pc01-193799 ansible_host=192.168.5.102
+pc01-193882 ansible_host=192.168.5.67
+pc01-193871 ansible_host=192.168.5.18
+pc01-193800 ansible_host=192.168.5.191
+pc01-193816 ansible_host=192.168.5.16
+pc01-193854 ansible_host=192.168.5.68
+pc01-193863 ansible_host=192.168.5.19
+pc01-193828 ansible_host=192.168.5.99
+pc01-193848 ansible_host=192.168.5.71
+pc01-193881 ansible_host=192.168.5.78
+pc01-193884 ansible_host=192.168.5.177
+pc01-193841 ansible_host=192.168.5.93
+pc01-193859 ansible_host=192.168.5.77
+pc01-193873 ansible_host=192.168.5.14
+pc01-193888 ansible_host=192.168.5.204
+pc01-193785 ansible_host=192.168.5.101
+pc01-193835 ansible_host=192.168.5.178
+pc01-193787 ansible_host=192.168.5.81
+pc01-193777 ansible_host=192.168.5.80
+pc01-193843 ansible_host=192.168.5.208
+pc01-193794 ansible_host=192.168.5.64
+pc01-193773 ansible_host=192.168.5.207
+
+[05]
+pc00-i0025 ansible_host=192.168.5.242
+pc01-193089 ansible_host=192.168.5.65
 
 [room1]
 pc05-10101 ansible_host=192.168.5.252
@@ -72,15 +194,40 @@ pc02-head_nurse ansible_host=192.168.5.126
 pc02-kdl ansible_host=192.168.5.174
 
 [temp]
-pc02-head_nurse ansible_host=192.168.5.126
+192.168.5.191
+#192.168.5.127
+#192.168.5.245
+#192.168.4.173
+#192.168.5.231
+#192.168.5.246
+#pc02-head_nurse ansible_host=192.168.5.126
+#192.168.108.19
+#192.168.5.222
+#192.168.5.65
+#192.168.108.182
+#192.168.1.177
+#192.168.1.175
+#192.168.5.233
+#192.168.108.193
+#192.168.5.248
+#192.168.5.249
+#192.168.1.174
+#192.168.108.180
+#192.168.108.204
+#192.168.5.226
+#192.168.5.127
+#192.168.5.191
+#192.168.4.190
+#192.168.5.17
+#sandbox2 ansible_host=192.168.1.92
 
-#[task:children]
-#room1
-#room4
-#room6
-#room9
-#room24
 
 [task]
 pc05-10108-1 ansible_host=192.168.5.233
 pc05-10105 ansible_host=192.168.5.248
+
+[callcenter]
+pc01-193105 ansible_host=192.168.5.236
+pc00-i0004 ansible_host=192.168.5.6
+pc00-i0005 ansible_host=192.168.5.7
+pc00-i0003 ansible_host=192.168.5.5
