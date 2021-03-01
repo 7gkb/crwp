@@ -1,0 +1,86 @@
+[all:vars]
+ansible_python_interpreter=/usr/bin/python3
+
+[sandbox]
+sandbox1 ansible_host=192.168.1.178
+
+[sandbox:vars]
+ansible_python_interpreter=/usr/bin/python3
+
+[hosts_install_1c]
+host1 ansible_host=192.168.1.200
+host2 ansible_host=192.168.1.201
+host3 ansible_host=192.168.1.202
+
+[terminal]
+192.168.1.181
+
+[mint]
+pc05-20206 ansible_host=192.168.5.226
+pc05-10115 ansible_host=192.168.5.227
+pc05-10113 ansible_host=192.168.5.228
+pc05-10112 ansible_host=192.168.5.229
+pc05-10117 ansible_host=192.168.5.237
+pc05-10120 ansible_host=192.168.5.239
+pc05-10119 ansible_host=192.168.5.238
+pc05-10121 ansible_host=192.168.5.240
+pc05-10122 ansible_host=192.168.5.241
+pc05-10114 ansible_host=192.168.5.242
+pc05-10123 ansible_host=192.168.5.243
+pc05-20202 ansible_host=192.168.5.244
+pc05-20208 ansible_host=192.168.5.245
+pc05-20204 ansible_host=192.168.5.246
+pc05-10104 ansible_host=192.168.5.247
+pc05-10105 ansible_host=192.168.5.248
+pc05-10106 ansible_host=192.168.5.249
+pc05-10107 ansible_host=192.168.5.251
+pc05-10101 ansible_host=192.168.5.252
+pc05-10111-1 ansible_host=192.168.5.231
+pc05-10111-2 ansible_host=192.168.5.232
+pc05-10108-1 ansible_host=192.168.5.233
+pc05-10108-2 ansible_host=192.168.5.234
+pc05-10102 ansible_host=192.168.5.235
+pc02-head_nurse ansible_host=192.168.5.126
+pc02-kdl ansible_host=192.168.5.174
+
+[room1]
+pc05-10101 ansible_host=192.168.5.252
+pc05-10102 ansible_host=192.168.5.235
+
+[room4]
+pc05-10105 ansible_host=192.168.5.248
+pc05-10104 ansible_host=192.168.5.247
+
+[room6]
+pc05-10106 ansible_host=192.168.5.249
+pc05-10107 ansible_host=192.168.5.251
+
+[room9]
+pc05-10108-1 ansible_host=192.168.5.233
+pc05-10108-2 ansible_host=192.168.5.234
+
+[room23]
+pc05-20204 ansible_host=192.168.5.246
+
+[room24]
+pc05-20206 ansible_host=192.168.5.226
+
+[head_nurse]
+pc02-head_nurse ansible_host=192.168.5.126
+
+[kdl]
+pc02-kdl ansible_host=192.168.5.174
+
+[temp]
+pc02-head_nurse ansible_host=192.168.5.126
+
+#[task:children]
+#room1
+#room4
+#room6
+#room9
+#room24
+
+[task]
+pc05-10108-1 ansible_host=192.168.5.233
+pc05-10105 ansible_host=192.168.5.248

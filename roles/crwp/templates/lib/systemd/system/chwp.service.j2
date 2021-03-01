@@ -1,0 +1,11 @@
+[Unit]
+Description=Chande wallpapers
+After=multi-user.target
+After=xorg@%i.socket
+
+[Service]
+Type=idle
+ExecStart=/home/{{ ansible_user }}/.chwp/chwp.sh
+
+[Install]
+WantedBy=multi-user.target

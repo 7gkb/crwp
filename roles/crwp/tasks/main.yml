@@ -1,0 +1,69 @@
+---
+# tasks file for crwp
+- name: Prepare for install crwp
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+    force: yes
+  with_items:
+    - "{{ crwp_install }}"
+  become: yes
+
+#- name: Copy crwp files
+#  copy:
+#    src: crwp
+#    dest: /opt/
+#  become: yes
+
+- name: Extract crwp files into /opt/crwp
+  unarchive:
+    src: crwp.tar.gz
+    dest: /opt/
+  become: yes
+
+- name: chmod
+  shell: chmod +x /opt/crwp/crwp && chmod 0777 /opt/crwp
+  become: yes
+
+- name: Copy chwp files
+  copy:
+    src: .chwp
+    dest: /home/{{ ansible_user }}/
+    mode: 0750
+
+- name: Add autostart
+  template: 
+    src: "{{ crwp_autostart[0] }}.j2"
+    dest: "{{ crwp_autostart[1] }}"
+
+#- name: Add service
+#  template:
+#    src: "{{ crwp_service }}.j2"
+#    dest: "/{{ crwp_service }}"
+#  become: yes
+
+#- name: just force systemd to reload
+#  systemd:
+#    daemon_reload: yes
+#  become: yes
+
+#- name: disable the service
+#  systemd:
+#    name: chwp
+#    enabled: no
+#    state: stopped
+#  become: yes
+
+#- name: remove the service
+#  file:
+#    path: /{{ crwp_service }}
+#    state: absent
+#  become: yes
+
+- name: Autostartup
+  shell: rm -f /home/{{ ansible_user }}/.xinitrc
+
+- name: start
+  shell: /home/{{ ansible_user }}/.chwp/chwp.sh
+  args:
+    chdir: /opt/crwp/

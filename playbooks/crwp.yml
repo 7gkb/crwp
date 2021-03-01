@@ -1,0 +1,4 @@
+---
+- hosts: pcs
+  roles:
+    - role: crwp
