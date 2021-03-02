@@ -2,11 +2,9 @@
 # tasks file for crwp
 - name: Prepare for install crwp
   apt:
-    name: "{{ item }}"
+    name: "{{ crwp_install }}"
     update_cache: yes
     force: yes
-  with_items:
-    - "{{ crwp_install }}"
   become: yes
 
 #- name: Copy crwp files
